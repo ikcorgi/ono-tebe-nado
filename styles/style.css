@@ -1,7 +1,6 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 148px 1fr;
-  height: 109px;
   font-size: 18px;
   font-weight: 400;
   margin: 92px 49px 92px 51px;
@@ -17,6 +16,7 @@
 .header__links-list  {
   display: flex;
   gap: 32px;
+  list-style-type: circle;
 }
 
 .header__links-list-item_no-bullit {
@@ -25,23 +25,25 @@
 
 .header__logo {
   display: inline;
-  width: 148px;
-  height: 105px;
 }
 
 .header__logo-image {
-  height: 100%;
+  height: 105px;
 }
 
 .address {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 240px;
+  max-width: 240px;
   line-height: 24.3px;
+  font-style: normal;
   margin-left: auto;
 }
 
+.address a {
+  width: fit-content;
+}
 
 .cover {
   background-image: url(../images/cover.jpg);
@@ -50,11 +52,7 @@
   color: #FFF;
   width: 100%;
   position: relative;
-  padding-top: 165px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-
+  padding: 165px 50px 50px;
 }
 
 .overlay {
@@ -125,14 +123,13 @@
   border: 1px solid #FFF;
   background: transparent;
   color: #FFF;
-  width: 257px;
-  height: 52px;
   text-align: center;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+  padding: 12px 32px;
 }
 
 .lots {
@@ -252,9 +249,14 @@
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  height: 240px;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.about__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .about__text {
@@ -262,18 +264,18 @@
   font-weight: 400;
 }
 
-.about__title + .about__text {
-  margin-bottom: 25px;
-}
-
 .footer {
-  display: grid;
-  grid-template-columns: 240px 149px 240px;
-  gap: 356px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: 18px;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 90px;
+}
+
+.footer .address {
+  margin-left: 0;
 }
 
 .footer__menu-list {
@@ -282,18 +284,15 @@
   font-weight: 400;
 }
 
-.footer__social-list {
-  height: 48px;
-  list-style-type: none;
-}
-
 .footer__menu-link_active {
   text-decoration: none;
 }
 
 .footer__social-list {
+  gap: 48px;
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
 }
 
 .footer__social-icon {
